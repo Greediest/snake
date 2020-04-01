@@ -1,0 +1,59 @@
+:root{
+  --floor-color: rgb(24, 5, 60);
+  --snake-color: #aaaaaa;
+  --food-color: #aaaa11;
+  --wall-color: #000000;
+
+  --border-color: rgb(47, 47, 107);
+  --cell-size: 15px;
+  --grid-width: 40;
+  --grid-height: 40;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(var(--grid-width), var(--cell-size));
+  grid-template-rows: repeat(var(--grid-height), var(--cell-size));
+  background-color: tomato;
+}
+.cell{
+  border: 2px solid var(--border-color);
+  background-color: var(--floor-color);
+}
+.cell.floor{
+  background-color: var(--floor-color);
+}
+.cell.snake{
+  background-color: var(--snake-color);
+}
+.cell.food{
+  background-color: var(--food-color);
+}
+.cell.wall{
+  background-color: var(--wall-color);
+}
+
+
+#app{
+  margin:  0 auto 0;
+  max-width: 100%;
+}
+@media (min-width: 576px) {
+  #app{
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  #app{
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  #app{
+    max-width: 920px;
+  }
+}
+@media (min-width: 1200px) {
+  #app{
+    max-width: 1200px;
+  }
+}
